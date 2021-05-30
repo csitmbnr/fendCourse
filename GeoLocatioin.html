@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Get Current Location  Details</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        $.getJSON('https://geoip-db.com/json/geoip.php?jsonp=?')
+           .done(function (location) {
+               $('#country').html(location.country_name);
+               $('#state').html(location.state);
+               $('#city').html(location.city);
+               $('#latitude').html(location.latitude);
+               $('#longitude').html(location.longitude);
+               $('#ip').html(location.IPv4);
+           });
+    </script>
+</head>
+<body>
+    <form runat="server" id="frm1">
+        <fieldset style="width: 350px;">
+            <legend>Get Current Location  Details</legend>
+            <div>
+                Country:
+                <asp:Label runat="server" ID="country"></asp:Label>
+            </div>
+            <div>
+                State:
+                <asp:Label runat="server" ID="state"></asp:Label>
+
+
+ 
+            </div>
+            <div>City:
+                <asp:Label runat="server" ID="city"></asp:Label></div>
+            <div>Latitude:
+                <asp:Label runat="server" ID="latitude"></asp:Label></div>
+            <div>Longitude:
+                <asp:Label runat="server" ID="longitude"></asp:Label></div>
+            <div>IP: <asp:Label runat="server" ID="ip"></asp:Label></div>
+        </fieldset>
+    </form>
+
+</body>
+</html>
