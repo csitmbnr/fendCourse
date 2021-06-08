@@ -32,7 +32,8 @@
 // }
 // console.log(fruits instanceof Array);
 
-// for .. in loop gets the indexs of elements of Array Object.
+// for .. in loop gets the indexs of elements of Array Object .
+// or to iterarte over properties of Object.
 // let i;
 // for(i in fruits){
 //     console.log (i, fruits[i]);
@@ -83,18 +84,27 @@
     // To check an element exists in an array
 //    console.log(numbers.indexOf(1) != -1);
 
+// const numbers = [1,2,3,1,4];
+    // console.log(numbers.indexOf(1)); //return 0.
+
+
+// indexIf accepts second parameter, startfrom
+    // const numbers = [1,2,3,1,4];
+    // console.log(numbers.indexOf(1,2)); 
+    //return index 3.
 
 
     // includes
     // we have a new method for the above purpose
-   // console.log(numbers.includes(1));
+//    console.log(numbers.includes(1));
 
     // To begin the search from specific index
    // console.log(numbers.indexOf(1,2)); //return 0.
 
     // The pop() method removes the last element from an array:
 // var fruits = ["Banana", "Orange", "Apple", "Mango"];
-// fruits.pop();              // Removes the last element ("Mango") from fruits
+// fruits.pop();              
+// Removes the last element ("Mango") from fruits
 // console.log(fruits);
 
 // The push() method adds a new element to an array (at the end):
@@ -108,19 +118,21 @@
 //    How to Recognize an Array
 //    A common question is: How do I know if a variable is an array?
 //    The problem is that the JavaScript operator typeof returns "object":
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-console.log(typeof fruits);    // returns object
+ var fruits = ["Banana", "Orange", "Apple", "Mango"];
+//  console.log(typeof fruits);    
+ // returns object
 //    To solve this problem ECMAScript 5 defines a new method Array.isArray():
-console.log(Array.isArray(fruits));   // returns true
+// console.log(Array.isArray(fruits));   // returns true
 
 
 // The JavaScript method toString() converts an array to a string of (comma separated) array values.
 
 // Example
-var fruits = ["Banana", "Orange", "Apple", "Mango"];
-console.log(fruits.toString());
+//  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+//  console.log(fruits.toString());
 
-
-// for(x of fruits){
-//     console.log(x)
-// }
+// to iterate over item or elements of an array.
+// no need to use index to get the value of element
+for(x of fruits){
+    console.log(x)
+}

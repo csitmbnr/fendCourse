@@ -1,5 +1,5 @@
 let role;
-    role='moderator';
+    role='RegisterUser';
 switch(role){
     case 'guest' :
         console.log("Guest User !");
@@ -7,8 +7,11 @@ switch(role){
     case 'moderator' :
         console.log("Moderator User !");
         break;
-    default :
-    case 'guest' :
+   
+    case 'Administrator' :
         console.log("Unknown User !");
         break;
+
+    default :
+        console.log('Restricted Area')
 }
