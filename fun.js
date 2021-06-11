@@ -34,15 +34,15 @@
 // // let result = add(2, 4);
 // console.log(add(2,4));
 
-function printNumber(number1, number2) {
-    var max = number1;
-    if (number2 > number1)
-        max = number2;
-    console.log('Maximal number: ' + max);
-}
-printNumber(-5, -10);
-printNumber(2 + 3, 10);
-printNumber(100, 200);
+// function printNumber(number1, number2) {
+//     var max = number1;
+//     if (number2 > number1)
+//         max = number2;
+//     console.log('Maximal number: ' + max);
+// }
+// printNumber(-5, -10);
+// printNumber(2 + 3, 10);
+// printNumber(100, 200);
 
 // inside every function we can use an object 
 //  called arguments
@@ -66,13 +66,76 @@ printNumber(100, 200);
 // printArguments(1, 2, 3, 4); // 1, 2, 3, 4
 
 
-var count = 0;
-function countVowels(name) {
-    for (var i = 0; i < name.length; i++) {
-        if (name[i] == "a" || name[i] == "e" || name[i] == "i" || name[i] == "o" || name[i] == "u")
-            count = count + 1;
+// var count = 0;
+// function countVowels(name) {
+//     for (var i = 0; i < name.length; i++) {
+//         if (name[i] == "a" || name[i] == "e" || name[i] == "i" || name[i] == "o" || name[i] == "u")
+//             count = count + 1;
+//     }
+//     console.log("Hello " + name + "!!! Your name has " + count + " vowels.");
+// }
+// var myName = 'anas';
+// console.log(countVowels(myName));
+
+
+// Functions in JavaScript can be Nested
+// function add() {
+//     var counter = 0;
+//     function plus() { counter += 1; }
+//     plus();// Function Call.
+//     return counter;
+// }
+// console.log(add());
+
+// Function Overloading:
+// JavaScript does not support function overloading 
+// i.e. only one function with a specified name can exist in the same scope
+function printText(number, text) {
+    switch (2) {
+        case 1: console.log('Number :' + number); break;
+        case 2:
+            console.log('Number :' + number);
+            console.log('Text :' + text);
+            break;
     }
-    console.log("Hello " + name + "!!! Your name has " + count + " vowels.");
 }
-var myName = 'anas';
-console.log(countVowels(myName));
+printText(5); // Logs 5
+printText(5, 'JavaScript Tutorials'); 
+// // Logs 5 and JavsScript Tutorials
+
+// // Function Declaration
+// function walk(){
+//     console.log('walk');
+// }
+// // Function Expression
+// const run = function(){
+//     console.log('run');
+// };
+
+// let move = run;
+// run();
+// move();
+
+// // function hoisting
+// // Function Declaration
+// walk();
+// function walk(){
+//     console.log('walk');
+// }
+// // Function Expression
+// run();
+// const run = function(){
+//     console.log('run');
+// };
+
+// const person = {
+//     name: 'Anas',
+//     walk() {console.log('walking')},
+//     talk() {console.log('talking')}
+// };
+// person.name = 'Ammar';
+// person['name'] = 'Hudaifa ibn yamaan';
+// console.log(person);
+// console.log(person.name);
+// console.log(person.walk);
+// person.walk();
