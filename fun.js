@@ -90,17 +90,17 @@
 // Function Overloading:
 // JavaScript does not support function overloading 
 // i.e. only one function with a specified name can exist in the same scope
-function printText(number, text) {
-    switch (2) {
-        case 1: console.log('Number :' + number); break;
-        case 2:
-            console.log('Number :' + number);
-            console.log('Text :' + text);
-            break;
-    }
-}
-printText(5); // Logs 5
-printText(5, 'JavaScript Tutorials'); 
+// function printText(number, text) {
+//     switch (2) {
+//         case 1: console.log('Number :' + number); break;
+//         case 2:
+//             console.log('Number :' + number);
+//             console.log('Text :' + text);
+//             break;
+//     }
+// }
+// printText(5); // Logs 5
+// printText(5, 'JavaScript Tutorials'); 
 // // Logs 5 and JavsScript Tutorials
 
 // // Function Declaration
@@ -118,15 +118,20 @@ printText(5, 'JavaScript Tutorials');
 
 // // function hoisting
 // // Function Declaration
-// walk();
+// walk(); // calling function.
 // function walk(){
 //     console.log('walk');
 // }
-// // Function Expression
+// Function Expression
 // run();
-// const run = function(){
-//     console.log('run');
-// };
+
+//  in this case walk1 is named function
+// Anonomus function-no name
+var run = function(a){
+    console.log('inside functions'+ a);
+};
+console.log('run var contains ',run);
+console.log('call fun ',run("hai"));
 
 // const person = {
 //     name: 'Anas',
