@@ -104,43 +104,49 @@
 // // Logs 5 and JavsScript Tutorials
 
 // // Function Declaration
-// function walk(){
-//     console.log('walk');
-// }
-// // Function Expression
-// const run = function(){
-//     console.log('run');
-// };
+function walk(){
+    console.log('walk');
+}
+// Function Expression
+const run = function(){
+    console.log('run');
+};
 
 // let move = run;
 // run();
 // move();
 
-// // function hoisting
-// // Function Declaration
-// walk(); // calling function.
-// function walk(){
-//     console.log('walk');
-// }
+// function hoisting
+// Function Declaration
+
+
+walk(); // calling function.
+function walk(){
+    console.log('walk');
+}
+
 // Function Expression
 // run();
 
 //  in this case walk1 is named function
 // Anonomus function-no name
+run();
 var run = function(a){
     console.log('inside functions'+ a);
 };
 console.log('run var contains ',run);
 console.log('call fun ',run("hai"));
-
-// const person = {
-//     name: 'Anas',
-//     walk() {console.log('walking')},
-//     talk() {console.log('talking')}
-// };
-// person.name = 'Ammar';
-// person['name'] = 'Hudaifa ibn yamaan';
-// console.log(person);
-// console.log(person.name);
-// console.log(person.walk);
-// person.walk();
+// an object in javascript contains key value pairs
+const person = {
+    name: 'Anas',
+    walk() {console.log('walking')},
+    talk(){console.log('talking')}
+};
+// Dot Notation
+ person.name = 'Ammar';
+ // Bracket Notation
+ person['name'] = 'Hudaifa ibn yamaan';
+ console.log(person);
+ console.log(person.name);
+ console.log(person.walk);
+ person.walk();
